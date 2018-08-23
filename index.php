@@ -16,6 +16,8 @@ $context = stream_context_create($opts);
 // Open the file using the HTTP headers set above
 $file = file_get_contents('https://api.clashroyale.com/v1/players/%2382QQ2CQR9', false, $context);
 $json = json_decode($file);
+
+var_dump($file);
 ?>
 
 <!DOCTYPE html >
@@ -47,16 +49,35 @@ $json = json_decode($file);
 
         <tbody>
 <?php
-//echo $json->{'name'};
+
 foreach ($json as $key => $value) {
-    echo "       
+for($i = 0; $i < sizeof($key); $i++) {
+    echo "
         <tr>
-            <td>" . $key . "</td>
-            <td>" . $value . "</td>
+            <td>" . $json[$i] . "</td>
+            <td>" . $json[$i][$i] . "</td>
         </tr>
 
         ";
 }
+}
+
+//for($i = 0; $i < sizeof($key); $i++) {
+//    echo "
+//        <tr>
+//            <td>" . $keys[$i] . "</td>
+//            <td>" . $keys[$i]->$value . "</td>
+//        </tr>
+//
+//        ";
+//
+//
+//    foreach($file[$keys[$i]] as $key => $value) {
+//        echo $key . " : " . $value . "<br>";
+//    }
+//    echo "}<br>";
+//}
+
 ?>
         </tbody>
     </table>
