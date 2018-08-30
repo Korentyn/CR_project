@@ -1,0 +1,22 @@
+body{
+    background-image: url(images/tavern.png);
+    background-repeat: no-repeat;
+    background-color: #ffde8c;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    z-index: -100;
+    background-position: center center;
+}
+#wrapper{
+
+
+}
+
+#header{
+    width: 30%;
+    height: 50%;
+    max-width: 50%;
+    background-color: #636363;
+    opacity: 0.75;
+    margin-left: 34%;
+}
